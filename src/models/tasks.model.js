@@ -2,7 +2,7 @@
 // for more of what you can do here.
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
-const timestamps = require('app/traits/timestamps')
+const field = require('app/migrations/field')
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
@@ -15,10 +15,9 @@ module.exports = function (app) {
         notEmpty: true,
       }
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
+    description: field.string({ allowNull: true }),
+    state: field.integer(),
+    deadline: field.timestamp({ allowNull: true }),
 
     userId: {
       type: DataTypes.INTEGER,
