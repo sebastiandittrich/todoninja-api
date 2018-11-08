@@ -26,7 +26,8 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "dev": "nodemon src/",
     "start": " node src/",
-    "mocha": "mocha test/ --recursive --exit"
+    "mocha": "mocha test/ --recursive --exit",
+    "deploy": "node deploy.js"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.9",
@@ -40,6 +41,7 @@
     "compression": "^1.7.3",
     "cors": "^2.8.4",
     "feathers-authentication-hooks": "^0.3.1",
+    "feathers-hooks-common": "^4.17.10",
     "feathers-sequelize": "^3.1.2",
     "helmet": "^3.13.0",
     "mysql2": "^1.6.1",

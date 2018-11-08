@@ -10,6 +10,8 @@ module.exports = {
       description: field.string({ allowNull: true }),
       state: field.integer({ defaultValue: 0 }),
       deadline: field.timestamp({ allowNull: true }),
+      waiting_for: field.string({ allowNull: true }),
+      today: field.date({ allowNull: true }),
 
       userId: field.foreignKey(),
       workspaceId: field.foreignKey({ allowNull: true }),

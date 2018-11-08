@@ -15,18 +15,15 @@ module.exports = function (app) {
         notEmpty: true,
       }
     },
+    doneAt: field.timestamp({ allowNull: true }),
     description: field.string({ allowNull: true }),
     state: field.integer(),
     deadline: field.timestamp({ allowNull: true }),
+    waiting_for: field.string({ allowNull: true }),
+    today: field.date({ allowNull: true }),
 
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    workspaceId: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    }
+    userId: field.integer(),
+    workspaceId: field.integer({ allowNull: true }),
 
   }, {
     hooks: {
