@@ -1,5 +1,5 @@
 {
-  "host": "your.domain.com",
-  "port": "PORT",
+  "host": "api.todoninja.de",
+  "port": "80",
   "mysql": "mysql://username:password@host:port/database"
 }
